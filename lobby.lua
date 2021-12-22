@@ -43,4 +43,21 @@ function TDS:FetchTowers()
     return Profile.Troops
 end
 
+function TDS:JoinLobby(Elevator)
+    local args = {
+        [1] = "Elevators",
+        [2] = "Enter",
+        [3] = Elevator
+}
+    MainRemote:InvokeServer(unpack(args))
+end
+
+function TDS:LeaveLobby()
+    local args = {
+        [1] = "Elevators",
+        [2] = "Leave"
+    }
+    MainRemote:InvokeServer(unpack(args))
+end
+
 return TDS;
