@@ -49,7 +49,7 @@ function TDS:JoinLobby(Elevator)
         [2] = "Enter",
         [3] = Elevator
 }
-    MainRemote:InvokeServer(unpack(args))
+    MainFunction:InvokeServer(unpack(args))
 end
 
 function TDS:LeaveLobby()
@@ -57,7 +57,7 @@ function TDS:LeaveLobby()
         [1] = "Elevators",
         [2] = "Leave"
     }
-    MainRemote:InvokeServer(unpack(args))
+    MainFunction:InvokeServer(unpack(args))
 end
 
 return TDS;
