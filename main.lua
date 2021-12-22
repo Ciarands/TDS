@@ -21,7 +21,7 @@ local function ManageLoadout()
         TDS:RemoveTower(v)
         rconsoleprint("Cleared tower: " .. v .. "\n")
     end
-    for i,v in ipairs(TowerConfigs[MapName]) do
+    for i,v in ipairs(TowerConfigs[MapName.Value]) do
         TDS:EquipTower(v)
     end
 end
